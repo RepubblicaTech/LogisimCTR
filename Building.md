@@ -9,7 +9,7 @@
 | elf         | Builds `<project name>.elf`.
 | release     | Release build, creates a `cia`, `3ds`, and a zip file containing the `smdh` and `3dsx`. <sup>3</sup>
 | run         | Builds the 3dsx and runs it on citra-qt
-| run_net     | Builds the 3dsx and uploads it to your 3DS (when opening 3dslink on Hombrew Launcher) and runs is directly from there
+| run_net     | Builds the 3dsx and uploads it to your 3DS (when opening 3dslink on Hombrew Launcher) and runs it directly from there
 
 **Notes:** 
 * <sup>1</sup> This requires having [makerom] and [bannertool] in your `$PATH`
