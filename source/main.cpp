@@ -7,15 +7,10 @@ int menubar = 0;
 int menucount = 0;
 char* menuStuff[] = {"NOT gate", "AND gate", "NAND gate"};
 Gate AND_gate, NOT_gate;
-AND_gate.Inputs = 2;
-AND_gate.Outputs = 1;
 
 int NOT(int in) {
     return not in;
 }
-
-NOT_gate.Inputs = 1;
-NOT_gate.Outputs = 1;
 
 int main(int argc, char **argv) {
     // Preparation stuff
@@ -53,15 +48,6 @@ int main(int argc, char **argv) {
         printf("\x1b[4;0HmenuItem = %d", menubar);
         printf("\x1b[5;0HNot 0 is %d", NOT(0))
 
-        /*
-
-        touchPosition touch;
-        hidTouchRead(&touch);
-
-        consoleSelect(&bottomScreen);
-        printf("\x1b[2;0H%03d; %03d", touch.px, touch.py);
-
-        */
         gfxFlushBuffers();
         gfxSwapBuffers();
 
