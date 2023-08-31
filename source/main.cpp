@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 
     consoleInit(GFX_TOP, &topScreen);
     // Stuff to render on top screen
-    printf("\x1b[10;9HLogisim3D Alpha codename 'Citrus'");
+    printf("\x1b[10;5HLogisim3D Alpha codename 'Citrus' build 23");
 
     consoleInit(GFX_BOTTOM, &bottomScreen);
     // Stuff to render on bottom screen
@@ -32,8 +32,8 @@ int main(int argc, char **argv) {
         u32 kDown = hidKeysDown();
 
         if (kDown & KEY_START) break;
-        if (kDown & KEY_DLEFT) menubar--;
-        if (kDown & KEY_DRIGHT) menubar++;
+        if (kDown & KEY_L) menubar--;
+        if (kDown & KEY_R) menubar++;
 
         if (menubar < 0) { menubar = menucount; }
         if (menubar >= menucount) { menubar = 0; }
