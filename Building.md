@@ -23,15 +23,6 @@
 * Aquire makerom and bannertool binaries from [buildtools], or compile them yourself from [makerom] and [bannertool]
 * Copy the makerom/bannertool to `$DEVKITARM/bin` or some other directory in your `$PATH`
 
-## Code::Blocks Setup
-1. Simply open `3ds.cbp` in Code::Blocks
-2. Choose File > Save as user-template and enter a template name.  The project setup is now a user template to create new projects.
-3. When creating a new project select File > New > From template and follow the wizard's instructions.
-4. Ensure you have the environment variables plugin installed (in linux you can install this by installing the codeblocks-contrib package)
-5. Choose Settings > Environment and scroll down to the Environment Variables section.
-6. Add `DEVKITPRO` and point it to where devkitpro is installed
-7. Add `DEVKITARM` and point it to where devkitarm is.
-
 To compile in Code::Blocks simply select your target from the list and click the Gear icon to automatically invoke the `Makefile`
 
 **Note** Make sure you are using MSYS2's make (make.exe) and not MINGW's make (mingw32-make.exe)
