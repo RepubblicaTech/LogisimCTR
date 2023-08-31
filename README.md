@@ -1,9 +1,9 @@
 # LogisimCTR
 A digital logic simulation for the 3DS
 
-To build the project follow the [Building instructions](Building.md) (Although it's just `make <the rules in the project>`)
+To build the project follow the [Building instructions](Building.md) (Although it's just `make <the target you need>`)
 
 # Requirements
-- Devkitpro (tested and used on Linux, but should work on other OSes)
-- The C/C++ compiler
-- Some knowledge on how compiling and 3DS homebrew dev works (shoudle come back in handy when compiling for the first time)
+- Devkitpro installed and in the PATH (tested and used on Linux, but should work on other OSes, follow [the wiki](https://devkitpro.org/wiki/Getting_Started) to install it)
+- The C/C++ compiler, and make (`sudo apt install build-essential` SHOULD do the job)
+- Some knowledge on how compiling and 3DS homebrew dev works (should come back in handy when compiling for the first time)
