@@ -31,12 +31,12 @@ int main(int argc, char **argv) {
         if (kDown & KEY_L) menubar--;
         if (kDown & KEY_R) menubar++;
 
+        consoleClear();
+
         if (menubar < 0) { menubar = menucount; }
         if (menubar >= menucount) { menubar = 0; }
 
         printf("\n\x1b[2;0H%s\n", menuStuff[menubar]);
-
-        consoleClear();
 
         gfxFlushBuffers();
         gfxSwapBuffers();
