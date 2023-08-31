@@ -7,3 +7,6 @@ To build the project follow the [Building instructions](Building.md) (Although i
 - Devkitpro installed and in the PATH (tested and used on Linux, but should work on other OSes, follow [the wiki](https://devkitpro.org/wiki/Getting_Started) to install it)
 - The C/C++ compiler, and make (`sudo apt install build-essential` SHOULD do the job)
 - Some knowledge on how compiling and 3DS homebrew dev works (should come back in handy when compiling for the first time)
+
+
+This project uses the [3DS template](https://github.com/TricksterGuy/3ds-template) from TricksterGuy, so shoutout to him.
