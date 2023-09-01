@@ -8,7 +8,8 @@ To build the project follow the [Building instructions](Building.md) (Although i
 - The C/C++ compiler, and make (`sudo apt install build-essential` SHOULD do the job)
 - Some knowledge on how compiling and 3DS homebrew dev works (should come back in handy when compiling for the first time)
 - NOTE FOR WINDOWS USERS: make sure to have citra (and citra-qt/room) in your PATH, else you have to point the location of your executable in the makefile in the `citra` and `run` targets
-- NOTE #2: The software has been tested only on a 2DS, so please submit an issue if any other 3DS model works/doesn't work
+
+## NOTE : The software has been tested only on a 2DS, so please submit an issue if any other 3DS model works/doesn't work
 
 # For novices in 3DS homebrew: Installing
 
