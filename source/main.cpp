@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 
 
     printf("\x1b[10;5HLogisim3D Alpha codename 'Citrus'\n");
-    printf("\nUse the L and R triggers to change the gates below");
+    printf("\nUse the Left and Right on D-Pad to change the gates below");
 
     while (aptMainLoop())
     {
@@ -33,26 +33,20 @@ int main(int argc, char **argv) {
         consoleSelect(&topScreen);
 
         // scroll through the logicGates menu
-        if (kDown & KEY_L) menubar--;
-        if (kDown & KEY_R) menubar++;
-
-        consoleClear();             // Clears the bottom screen to avoid overlapping text
-        /*  Example
-
-            NAND GATE
-
-            After scrolling:
-
-            AND GATEE <--- This E was from before scrolling
-            consoleClear() should do the job for now
-            (we may need to change it ASAP, it could be an issue for future stuff)
-        */
-        printf("\n\x1b[2;0H%s\n", menuStuff[menubar]);      // actually displays the gate
+        if (kDown & KEY_L) {
+            menubar--;
+            consoleClear();
+        }
+        if (kDown & KEY_R) {
+            menubar++;
+            consoleClear();
+        }
 
         // this is to get the "infinite" scroll
-        if (menubar < 0) { menubar = menucount; }
+        if (menubar < 0) { menubar = menucount - 1; }
         if (menubar >= menucount) { menubar = 0; }
 
+        printf("\n\x1b[2;0H%s\n", menuStuff[menubar]);      // actually displays the gate
         
 
         gfxFlushBuffers();
