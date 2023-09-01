@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 
 
     printf("\x1b[10;5HLogisim3D Alpha codename 'Citrus'\n");
-    printf("\nUse the Left and Right on D-Pad to change the gates below");
+    printf("\nUse the L and R triggers to scroll through the menu");
 
     while (aptMainLoop())
     {
