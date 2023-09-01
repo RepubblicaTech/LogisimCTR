@@ -118,8 +118,7 @@ export HFILES         := $(PICAFILES:.v.pica=_shbin.h) $(SHLISTFILES:.shlist=_sh
                          $(GFXFILES:.t3s=.h)
 export INCLUDE        := $(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
                          $(foreach dir,$(LIBDIRS),-I$(dir)/include) \
-                         -I$(CURDIR)/$(BUILD) -I$(CURDIR)/source/include/
-
+                         -I$(CURDIR)/$(BUILD)
 export LIBPATHS       := $(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
 export _3DSXDEPS      := $(if $(NO_SMDH),,$(OUTPUT_FILE).smdh)
