@@ -46,3 +46,6 @@ romfs/
 
 # Debug files
 *.dSYM/
+
+# other files
+*.lst
