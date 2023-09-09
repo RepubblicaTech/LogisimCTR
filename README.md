@@ -11,7 +11,7 @@ To build the project follow the [Building instructions](Building.md) (Although i
 
 ## NOTE : The software has been tested only on a 2DS, so please submit an issue if any other 3DS model works/doesn't work
 
-# For novices in 3DS homebrew: Installing
+# For novices in 3DS homebrew: Installing LogisimCTR on your 3DS system
 
 There are both a .CIA (to install on the HOME screen) and .3DSX/SDMH (to start from the Homebrew Launcher)
 If you download the CIA, just copy it to the SD card (in any directory you want) and install it from FBI (or you can use [Boop](https://github.com/miltoncandelero/Boop) to remote install it)
