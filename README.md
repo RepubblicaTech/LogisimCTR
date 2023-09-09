@@ -16,7 +16,7 @@ To build the project follow the [Building instructions](Building.md) (Although i
 There are both a .CIA (to install on the HOME screen) and .3DSX/SDMH (to start from the Homebrew Launcher)
 If you download the CIA, just copy it to the SD card (in any directory you want) and install it from FBI (or you can use [Boop](https://github.com/miltoncandelero/Boop) to remote install it)
 
-If you downloaded LogisimCTR.zip, copy the extracted content from the `3ds` folder to the SD card (maybe inside the `3ds` folder, for easier access from Homebrew Launcher). Make sure that both 3DSX and SMDH files are in the same directory (it may not work if they are separate)
+If you downloaded LogisimCTR.zip, copy the extracted content from the `3dsx` and `.smdh` to the SD card (maybe inside the `3ds` folder, for easier access from Homebrew Launcher). Make sure that both 3DSX and SMDH files are in the same directory (it may not work if they are separate)
 
 ### Contents of LogisimCTR.zip:
 ```
