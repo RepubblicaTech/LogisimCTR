@@ -1,5 +1,5 @@
-APP_TITLE = LogisimCTR
-APP_DESCRIPTION = A digital logic simulator for the 3DS
+APP_TITLE = LogisimCTR_alpha
+APP_DESCRIPTION = A digital logic simulator for the 3DS. Still in alpha
 APP_AUTHOR = RepubblicaTech
 APP_PRODUCT_CODE = LogisimCTR_2023
 APP_UNIQUE_ID = 0x1929

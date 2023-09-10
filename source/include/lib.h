@@ -11,17 +11,21 @@ struct logicGate
         1 = custom (2 bits, 1 byte etc..)
     */
 
-   char returnMessage;
-
-   int loadGate() {
-    int input_list[inputs];
-    int inputs_num = 0;
-    // Initialise inputs
-    for (int i = 0; i < inputs; i++)
-        input_list[i] = i;
-        inputs_num++;
-
-    return inputs_num;
-    
-   }
+   int gateOperation;
 };
+
+logicGate NOTgate;
+NOTgate.inputs = 1;
+NOTgate.outputs = 1;
+NOTgate.outType = 0;
+int notGate = NOTgate.loadGate();
+
+logicGate ANDgate;
+ANDgate.inputs = 2;
+ANDgate.outputs = 1;
+ANDgate.outType = 0;
+
+logicGate NANDgate;
+NANDgate.inputs = 2;
+NANDgate.outputs = 1;
+NANDgate.outType = 0;
