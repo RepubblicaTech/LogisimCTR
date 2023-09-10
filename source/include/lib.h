@@ -2,8 +2,7 @@
 
 struct logicGate
 {
-    int inputs;
-    int outputs;
+    int inputs, outputs;
 
     int outType;
     /*
