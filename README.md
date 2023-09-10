@@ -1,5 +1,5 @@
 # LogisimCTR
-A digital logic simulation for the 3DS
+A digital logic simulator for the 3DS
 
 To build the project follow the [Building instructions](Building.md) (Although it's just `make <the target you need>`)
 
