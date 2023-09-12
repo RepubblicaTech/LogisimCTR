@@ -56,7 +56,7 @@ RSF             := $(TOPDIR)/$(RESOURCES)/template.rsf
 # options for code generation
 #---------------------------------------------------------------------------------
 ARCH        := -march=armv6k -mtune=mpcore -mfloat-abi=hard -mtp=soft
-COMMON      := -Wall -O2 -mword-relocations -fomit-frame-pointer -ffunction-sections $(ARCH) $(INCLUDE) -D__3DS__
+COMMON      := -O2 -mword-relocations -fomit-frame-pointer -ffunction-sections $(ARCH) $(INCLUDE) -D__3DS__ # -Wall
 CFLAGS      := $(COMMON) -std=gnu99
 CXXFLAGS    := $(COMMON) -fno-rtti -fno-exceptions -std=gnu++11
 ASFLAGS     := $(ARCH)
@@ -118,7 +118,8 @@ export HFILES         := $(PICAFILES:.v.pica=_shbin.h) $(SHLISTFILES:.shlist=_sh
                          $(GFXFILES:.t3s=.h)
 export INCLUDE        := $(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
                          $(foreach dir,$(LIBDIRS),-I$(dir)/include) \
-                         -I$(CURDIR)/$(BUILD)
+                         -I$(CURDIR)/$(BUILD) \
+						 -I$(SOURCES)/include
 export LIBPATHS       := $(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
 export _3DSXDEPS      := $(if $(NO_SMDH),,$(OUTPUT_FILE).smdh)
