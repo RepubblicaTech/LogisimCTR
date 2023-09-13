@@ -154,7 +154,7 @@ endif
 #---------------------------------------------------------------------------------
 .PHONY : clean all bootstrap 3dsx cia elf 3ds citra release
 
-all : bootstrap
+all : bnum bootstrap
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 
 3dsx : bootstrap
@@ -174,6 +174,9 @@ citra : bootstrap
 
 release : bootstrap
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile $@
+
+bnum:
+	cd source/include && ./buildnumber
 
 bootstrap :
 	@[ -d $(BUILD) ] || mkdir -p $(BUILD)

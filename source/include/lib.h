@@ -1,28 +1,18 @@
 #pragma once
+#include <3ds.h>
+#include <iostream>
+#include "lib.h"
+#include <stdio.h>
+using namespace std;
 
-struct logicGate
-{
-    int inputs, outputs;
-
-    int outType;
-    //  0 = 1 bit (0/1)
-    //  1 = custom (2 bits, 1 byte etc..)
-
-   int gateOperation;
+struct io {
+    int state = 0;
+    // 0 = off, 1 = on
 };
 
-logicGate NOTgate;
-NOTgate.inputs = 1;
-NOTgate.outputs = 1;
-NOTgate.outType = 0;
-int notGate = NOTgate.loadGate();
 
-logicGate ANDgate;
-ANDgate.inputs = 2;
-ANDgate.outputs = 1;
-ANDgate.outType = 0;
-
-logicGate NANDgate;
-NANDgate.inputs = 2;
-NANDgate.outputs = 1;
-NANDgate.outType = 0;
+struct logicGate {
+    char* name = "Sample gate";
+    int ins = 0;
+    int outs = 0;
+};
