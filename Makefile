@@ -175,8 +175,11 @@ citra : bootstrap
 release : bootstrap
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile $@
 
-bnum:
+bnum: source/include/buildnumber
 	cd source/include && ./buildnumber
+
+source/include/buildnumber:
+	make -C source/include/buildnumber-src
 
 bootstrap :
 	@[ -d $(BUILD) ] || mkdir -p $(BUILD)
