@@ -51,3 +51,4 @@ source/include/buildnumber
 
 # other files
 *.lst
+source/include/buildnumber
