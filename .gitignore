@@ -3,6 +3,8 @@ build/
 output/
 romfs/
 
+source/include/buildnumber
+
 # directories
 .vscode/
 
