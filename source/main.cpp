@@ -1,8 +1,9 @@
 #include <3ds.h>
 #include <iostream>
-#include "lib.h"
-#include "buildnumber.h"
 #include <stdio.h>
+#include "lib.h"
+#include "VariadicTable.h"
+#include "buildnumber.h"
 using namespace std;
 
 int main(int argc, char **argv) {
@@ -14,11 +15,13 @@ int main(int argc, char **argv) {
 
     andGate.ins = 2;
     andGate.outs = 1;
+    int and_inputs[andGate.ins];
+    int and_outputs[andGate.outs];
 
-    notGate.outs = 1;
-    notGate.ins = notGate.outs;
-
-    int debug = notGate.init();
+    notGate.ins = 1;
+    notGate.outs = notGate.ins;
+    int not_inputs[notGate.ins];
+    int not_outputs[notGate.outs];
 
     // init some logicGates menu vars
     logicGate logicGates[] = {notGate,
@@ -67,9 +70,45 @@ int main(int argc, char **argv) {
         if (menubar < 0) { menubar = menucount - 1; }
         if (menubar >= menucount) { menubar = 0; }
 
-        printf("\n\x1b[2;0H%s gate\n", menuStuff[menubar]);      // actually displays the gate
+        printf("\n\x1b[2;0H%s gate\n\n", menuStuff[menubar]);      // actually displays the gate
         printf("Inputs: %d\n", logicGates[menubar].ins);
-        printf("Outputs: %d\n", logicGates[menubar].outs);
+        printf("Outputs: %d\n\n", logicGates[menubar].outs);
+        
+        if (menuStuff[menubar] == "NOT") {
+            
+            not_inputs[0] = 1;
+            not_outputs[0] = not not_inputs[0];
+            VariadicTable<int, int> vt({"IN", "OUT"},
+                                        10);
+            vt.addRow(not_inputs[0], not_outputs[0]);
+            not_inputs[0] = 0;
+            not_outputs[0] = NOT(not_inputs[0]);
+            vt.addRow(not_inputs[0], not_outputs[0]);
+            vt.print(std::cout);
+        }
+        if (menuStuff[menubar] == "AND") {
+            
+            and_inputs[0] = 0;
+            and_inputs[1] = 0;
+            and_outputs[0] = AND(and_inputs[0], and_inputs[1]);
+            VariadicTable<int, int, int> vt({"IN1", "IN2", "OUT"},
+                                              10);
+            vt.addRow(and_inputs[0], and_inputs[1], and_outputs[0]);
+            and_inputs[0] = 1;
+            and_inputs[1] = 0;
+            and_outputs[0] = AND(and_inputs[0], and_inputs[1]);
+            vt.addRow(and_inputs[0], and_inputs[1], and_outputs[0]);
+            and_inputs[0] = 0;
+            and_inputs[1] = 1;
+            and_outputs[0] = AND(and_inputs[0], and_inputs[1]);
+            vt.addRow(and_inputs[0], and_inputs[1], and_outputs[0]);
+            and_inputs[0] = 1;
+            and_inputs[1] = 1;
+            and_outputs[0] = AND(and_inputs[0], and_inputs[1]);
+            vt.addRow(and_inputs[0], and_inputs[1], and_outputs[0]);
+
+            vt.print(std::cout);
+        }
 
         consoleSelect(&bottomScreen);
 
