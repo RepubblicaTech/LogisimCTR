@@ -181,7 +181,7 @@ bnum: source/include/buildnumber
 source/include/buildnumber:
 	make -C source/include/buildnumber-src
 
-bootstrap :
+bootstrap : bnum
 	@[ -d $(BUILD) ] || mkdir -p $(BUILD)
 	@[ -d $(OUTPUT_DIR) ] || mkdir -p $(OUTPUT_DIR)
 	@[ -d $(GFXBUILD) ] || mkdir -p $(GFXBUILD)
