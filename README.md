@@ -27,5 +27,10 @@ If you downloaded LogisimCTR.zip, copy the extracted content from inside the `3d
 
 __________________________________________________________________________________________________________
 
+# Shoutouts
 
-This project uses the [3DS template](https://github.com/TricksterGuy/3ds-template) from TricksterGuy, so shoutout to him.
+This project uses the [3DS template](https://github.com/TricksterGuy/3ds-template) from TricksterGuy.
+
+The build number system source comes from [here](https://buildnumber.sourceforge.net/).
+
+The table printing uses this header from [freidmud's VariadicTable](https://github.com/friedmud/variadic_table).
