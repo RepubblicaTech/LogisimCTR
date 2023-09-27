@@ -181,10 +181,12 @@ bnum: source/include/buildnumber
 source/include/buildnumber:
 	make -C source/include/buildnumber-src
 
-bootstrap : bnum
+bootstrap :
 	@[ -d $(BUILD) ] || mkdir -p $(BUILD)
 	@[ -d $(OUTPUT_DIR) ] || mkdir -p $(OUTPUT_DIR)
 	@[ -d $(GFXBUILD) ] || mkdir -p $(GFXBUILD)
+
+bnum: bootstrap
 
 clean :
 	@echo clean ...
