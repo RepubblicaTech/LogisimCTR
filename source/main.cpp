@@ -24,13 +24,8 @@ int main(int argc, char **argv) {
     int not_outputs[notGate.outs];
 
     // init some logicGates menu vars
-<<<<<<< Updated upstream
-    // The list of gates
-    logicGate logicGates[] = {notGate,
-=======
 
     logicGate logicGates[] = {notGate,              // The list of gates
->>>>>>> Stashed changes
                               andGate};
     int menucount = 0;                              // Counts how many items are in menuStuff
     int menubar = 0;                                // Counter to know which is the displaying item in the list
