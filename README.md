@@ -1,5 +1,7 @@
-# LogisimCTR
+# LogisimCTR-GUI
 A digital logic simulator for the 3DS
+
+# This version is in a dev stage trying to implement a GUI, for now there is none, but if someone has a good/not outdated library/method for so, be sure to submit an issue!
 
 To build the project follow the [Building instructions](Building.md) (Although it's just `make <the target you need>`)
 
