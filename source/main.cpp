@@ -24,16 +24,15 @@ int main(int argc, char **argv) {
     int not_outputs[notGate.outs];
 
     // init some logicGates menu vars
+    // The list of gates
     logicGate logicGates[] = {notGate,
                               andGate};
-    char* menuStuff[] = {notGate.name,
-                         andGate.name};             // The list of gates
     int menucount = 0;                              // Counts how many items are in menuStuff
     int menubar = 0;                                // Counter to know which is the displaying item in the list
 
     
     // Preparation stuff
-    for (auto i: menuStuff) {
+    for (auto i: logicGates) {
         menucount++;            // get items quantity from the menu array
     }
 
@@ -70,11 +69,11 @@ int main(int argc, char **argv) {
         if (menubar < 0) { menubar = menucount - 1; }
         if (menubar >= menucount) { menubar = 0; }
 
-        printf("\n\x1b[2;0H%s gate\n\n", menuStuff[menubar]);      // actually displays the gate
+        printf("\n\x1b[2;0H%s gate\n\n", logicGates[menubar].name);      // actually displays the gate
         printf("Inputs: %d\n", logicGates[menubar].ins);
         printf("Outputs: %d\n\n", logicGates[menubar].outs);
         
-        if (menuStuff[menubar] == "NOT") {
+        if (logicGates[menubar].name == "NOT") {
             
             not_inputs[0] = 1;
             not_outputs[0] = not not_inputs[0];
@@ -86,7 +85,7 @@ int main(int argc, char **argv) {
             vt.addRow(not_inputs[0], not_outputs[0]);
             vt.print(std::cout);
         }
-        if (menuStuff[menubar] == "AND") {
+        if (logicGates[menubar].name == "AND") {
             
             and_inputs[0] = 0;
             and_inputs[1] = 0;
