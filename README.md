@@ -6,6 +6,9 @@ A digital logic simulator for the 3DS
 ## The idea
 How this thing should work and look like: [Digital Logic Sim by Sebastian Lague](https://sebastian.itch.io/digital-logic-sim)
 
+![image](https://github.com/RepubblicaTech/LogisimCTR/assets/76620155/5e326d03-5b86-4bf9-80ac-729d532e6e50)
+
+
 ## The reality
 How actually it is: 
 
