@@ -1,14 +1,10 @@
 # LogisimCTR
 A digital logic simulator for the 3DS
 
-
 # This branch is in a dev stage trying to implement a GUI, for now there is none, but if someone has a good/not outdated library/method for so, be sure to submit an issue!
 
 ## The idea
 How this thing should work and look like: [Digital Logic Sim by Sebastian Lague](https://sebastian.itch.io/digital-logic-sim)
-
-![image](https://github.com/RepubblicaTech/LogisimCTR/assets/76620155/12de1d62-146c-4c7a-aefe-fed27eae2e3b)
-
 
 ## The reality
 How actually it is: 
