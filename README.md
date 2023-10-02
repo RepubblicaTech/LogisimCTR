@@ -1,13 +1,15 @@
 # LogisimCTR
 A digital logic simulator for the 3DS
 
+# This branch is in a dev stage trying to implement a GUI, for now there is none, but if someone has a good/not outdated library/method for so, be sure to submit an issue!
+
 ## The idea
 How this thing should work and look like: [Digital Logic Sim by Sebastian Lague](https://sebastian.itch.io/digital-logic-sim)
-![image](https://github.com/RepubblicaTech/LogisimCTR/assets/76620155/12de1d62-146c-4c7a-aefe-fed27eae2e3b)
-
 
 ## The reality
-How actually it is: ![image](https://github.com/RepubblicaTech/LogisimCTR/assets/76620155/b7188138-1b87-4c5f-a858-d84e7e183686)
+How actually it is: 
+
+![image](https://github.com/RepubblicaTech/LogisimCTR/assets/76620155/b7188138-1b87-4c5f-a858-d84e7e183686)
 
 ## Building
 To build the project follow the [Building instructions](Building.md) (Although it's just `make <the target you need>`)
@@ -42,5 +44,7 @@ ________________________________________________________________________________
 This project uses the [3DS template](https://github.com/TricksterGuy/3ds-template) from TricksterGuy.
 
 The build number system source comes from [here](https://buildnumber.sourceforge.net/).
+
+The table printing uses [this header](https://github.com/friedmud/variadic_table/blob/master/include/VariadicTable.h) from [freidmud's VariadicTable](https://github.com/friedmud/variadic_table).
 
 The table printing uses [this header](https://github.com/friedmud/variadic_table/blob/master/include/VariadicTable.h) from [freidmud's VariadicTable](https://github.com/friedmud/variadic_table).
