@@ -47,5 +47,3 @@ This project uses the [3DS template](https://github.com/TricksterGuy/3ds-templat
 The build number system source comes from [here](https://buildnumber.sourceforge.net/).
 
 The table printing uses [this header](https://github.com/friedmud/variadic_table/blob/master/include/VariadicTable.h) from [freidmud's VariadicTable](https://github.com/friedmud/variadic_table).
-
-The table printing uses [this header](https://github.com/friedmud/variadic_table/blob/master/include/VariadicTable.h) from [freidmud's VariadicTable](https://github.com/friedmud/variadic_table).
